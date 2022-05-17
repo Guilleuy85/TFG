@@ -1,0 +1,41 @@
+<div class="todo">
+  <body background="/assets/ropa2.jpeg">
+    <div class="wrapper fadeInDown">
+      <div id="formContent">
+        <!-- Tabs Titles -->
+
+        <!-- Icon -->
+        <div class="fadeIn first">
+          <img src="/assets/logop.gif" id="icon" alt="User Icon" />
+        </div>
+
+        <!-- Login Form -->
+        <form>
+          <input
+
+            id="login"
+            class="form-control col-9 m-5"
+            name="login"
+
+            placeholder="Usuario"
+          />
+          <input
+            type="password"
+            id="password"
+
+            class="form-control col-9 m-5"
+            name="login"
+            placeholder="Contraseña"
+          />
+          <input type="submit" class="fadeIn fourth" value="Entrar" (click)="siguiente()" />
+        </form>
+
+        <!-- Remind Passowrd -->
+        <div id="formFooter">
+          <a class="underlineHover" (click)="noImplementado()">Recuperar contraseña</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</div>
+<edix-footer></edix-footer>

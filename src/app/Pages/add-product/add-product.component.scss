@@ -1,0 +1,23 @@
+.form{
+  align-self: center;
+  margin: 1em;
+  padding: 25em;
+  height: wrap;
+  width: wrap;
+
+}
+
+
+.is-required:before {
+
+  content: "*";
+
+  margin-left: 3px;
+
+  color: red;
+
+  font-weight: bold;
+
+}
+
+
