@@ -43,31 +43,28 @@
         ></textarea>
       </div>
       <div class="col-6">
-        <label for="precioCompra" class="form-label is-required"
-          >Precio de Compra
+        <label for="precio" class="form-label is-required"
+          >Precio
         </label>
         <input
-          id="precioCompra"
-          name="precioCompra"
+          id="precio"
+          name="precio"
           type="text"
           type="text"
           class="form-control"
-          placeholder="Precio de compra"
-          [(ngModel)]="data.precioCompra"
+          placeholder="Precio"
+          [(ngModel)]="data.precio"
         />
       </div>
       <div class="col-6">
-        <label for="precioVenta" class="form-label is-required"
-          >Precio de Venta
+        <label for="imagen" class="form-label is-required"
+          >Imagen
         </label>
         <input
-          id="precioVenta"
-          name="precioVenta"
-          type="text"
-          type="text"
-          class="form-control"
-          placeholder="Precio de Venta"
-          [(ngModel)]="data.precioVenta"
+          id="imagen"
+          name="imagen"
+          type="file"
+          accept=".png, .jpg, .jpeg"
         />
       </div>
 

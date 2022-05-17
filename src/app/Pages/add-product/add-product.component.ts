@@ -19,8 +19,8 @@ export class AddProductComponent implements OnInit {
     nombre: undefined,
     descripcion: undefined,
     categoria: undefined,
-    precioCompra: undefined,
-    precioVenta: undefined
+    precio: undefined,
+    imagen: undefined
   }
 
   tiene:boolean =false;
