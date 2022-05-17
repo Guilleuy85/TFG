@@ -57,7 +57,7 @@ export class LoginComponent implements OnInit {
 
   /**Método que se llama con el botón "Recuperar contraseña y da un alert" */
   public noImplementado() {
-    alert("  Si quieres crear un nuevo usuario\n  Ponte en contacto con \n  info@pickacloth.es");
+    alert("  Si quieres crear un nuevo usuario\n  Ponte en contacto con nosotros \n  info@pickacloth.es");
   }
 }
 
