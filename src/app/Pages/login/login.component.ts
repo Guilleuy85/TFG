@@ -1,7 +1,9 @@
+import { usuarios } from './../../Models/hardData';
 import { CambioPaginaService } from './../../Services/CambioPagina/cambio-pagina.service';
 import { LoadingService } from 'src/app/Services/Loading/loading.service';
 import { Component, OnInit } from '@angular/core';
-import {  Router } from '@angular/router';
+import { Router } from '@angular/router';
+import { User } from 'src/app/Models/hardData';
 
 @Component({
   selector: 'edix-login',
@@ -10,25 +12,53 @@ import {  Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  loading;
-  router: Router;
-  login= 1;
 
-  constructor(
-              private loadingService: LoadingService,
-              private cambio: CambioPaginaService
-              ) { }
+  router: Router;//variable para poder enrutar.
+  login = 1;//Variable que se pasa en el método cambioDePágina.
+
+
+
+  /**
+   *variable que se recibe al hacer click en entar.
+   *
+   * @var usuarioEscrito
+   * @var contrasenaEscrita
+   */
+  usuarioEscrito: string;
+  contrasenaEscrita: string;
+
+  listaUsuarios: User[];
+
+
+  constructor(private cambio: CambioPaginaService) { }
 
   ngOnInit(): void {
-
+    this.cargarDatos();
   }
 
-  public siguiente (){
-    this.cambio.cambioPagina(this.login);
 
+  /**Método que carga los datos de usuarios y contraseñas para realizar la comprobación*/
+  cargarDatos() {
+    this.listaUsuarios = usuarios;
   }
 
-  public noImplementado(){
-    alert("Aún no implementado");
+  /**Método que comprueba al pulsar entar que el usuario y contraseña son correctos
+   * En caso de que lo sea llama a la función cambioDePagina
+   * Y nos pasa a la página principal.
+   */
+  public comprobarusuario() {
+    for (let i = 0; i < this.listaUsuarios.length; ++i) {
+      if (this.listaUsuarios[i].usuario === this.usuarioEscrito &&
+        this.listaUsuarios[i].contrasena === this.contrasenaEscrita) {
+        this.cambio.cambioPagina(this.login);
+      }
+    }
+  }
+
+  /**Método que se llama con el botón "Recuperar contraseña y da un alert" */
+  public noImplementado() {
+    alert("  Si quieres crear un nuevo usuario\n  Ponte en contacto con \n  info@pickacloth.es");
   }
 }
+
+

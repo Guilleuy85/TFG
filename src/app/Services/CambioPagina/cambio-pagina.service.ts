@@ -23,7 +23,7 @@ export class CambioPaginaService {
   constructor(private router: Router) { }
 
   public cambioPagina(pagina: number) {
-    console.log("pagina"+pagina)
+   // console.log("pagina"+pagina)
     this.actualIndexRoute =pagina;
     this.router.navigateByUrl(
       this.routes[this.actualIndexRoute].path)

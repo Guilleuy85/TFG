@@ -10,24 +10,24 @@
         </div>
 
         <!-- Login Form -->
-        <form>
+        <form class="form">
           <input
 
             id="login"
             class="form-control col-9 m-5"
             name="login"
-
             placeholder="Usuario"
+            [(ngModel)]="this.usuarioEscrito"
           />
           <input
             type="password"
             id="password"
-
             class="form-control col-9 m-5"
             name="login"
             placeholder="Contraseña"
+            [(ngModel)]="this.contrasenaEscrita"
           />
-          <input type="submit" class="fadeIn fourth" value="Entrar" (click)="siguiente()" />
+          <input type="submit" class="fadeIn fourth" value="Entrar" (click)="comprobarusuario()" />
         </form>
 
         <!-- Remind Passowrd -->
