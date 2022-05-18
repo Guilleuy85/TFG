@@ -1,3 +1,4 @@
+import { FirebaseService } from './../../Services/Firebase/firebase.service';
 import { Categoria, categorias } from './../../Models/Categorias';
 import { CambioPaginaService } from './../../Services/CambioPagina/cambio-pagina.service';
 import { Product } from './../../Models/product.interface';
@@ -34,7 +35,8 @@ export class AddProductComponent implements OnInit {
   constructor(
     private loadingService: LoadingService,
     private cambio: CambioPaginaService,
-    private http: HttpClientModule
+    private http: HttpClientModule,
+    private firebase:FirebaseService
   ) { }
 
   ngOnInit(): void {
@@ -57,6 +59,8 @@ export class AddProductComponent implements OnInit {
   }
 
   public saveProduct() {
+this.firebase.guardarProductos(this.data)
+    //this.firebase.guardarProductos(this.data)
     console.log("Nombre: "+this.data.nombreProducto+
                 " Categoria: "+this.data.categoriaProducto+
                 " Descripcion: "+this.data.descripcionProducto+

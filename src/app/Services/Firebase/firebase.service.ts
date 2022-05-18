@@ -9,8 +9,8 @@ export class FirebaseService {
 
   constructor(private httpClient:HttpClient) { }
 
-  guardarProductos(producto: Product[]){
+  guardarProductos(producto: any){
     //Esto está mal.
-    this.httpClient.post('gs://tfgedix.appspot.com',producto)
+    this.httpClient.post('https://tfgedix-default-rtdb.europe-west1.firebasedatabase.app/datos.json',producto)
   }
 }
