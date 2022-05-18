@@ -2,6 +2,8 @@
 import { Component,  OnInit } from '@angular/core';
 
 
+
+
 @Component({
   selector: 'edix-view-products',
   templateUrl: './view-products.component.html',

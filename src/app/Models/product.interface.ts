@@ -1,10 +1,11 @@
 
 export interface Product {
 
-  nombre: string;
-  descripcion: string;
-  categoria: string;
-  precio: string;
+  nombreProducto: string;
+  descripcionProducto: string;
+  categoriaProducto: string;
+  precioCompraProducto: string;
+  precioVentaProducto: string
   imagen: File;
 
 }

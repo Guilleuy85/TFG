@@ -50,7 +50,7 @@ export class LoginComponent implements OnInit {
     for (let i = 0; i < this.listaUsuarios.length; ++i) {
       if (this.listaUsuarios[i].usuario === this.usuarioEscrito &&
         this.listaUsuarios[i].contrasena === this.contrasenaEscrita) {
-        this.cambio.cambioPagina(this.login);
+        this.cambio.cambioPagina(this.login, true);
       }
     }
   }

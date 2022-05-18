@@ -4,17 +4,16 @@
     <form class="form">
       <h1>AGREGAR PRODUCTO</h1>
       <div class="col-6">
-        <label for="nombre" class="col-sm-3 col-form-label is-required"
+        <label for="nombreProducto" class="col-sm-3 col-form-label is-required"
           >Nombre</label
         >
         <input
-          id="Name"
-          name="Name"
-          type="text"
+          id="nombreProducto"
+          name="nombreProducto"
           type="text"
           class="form-control"
           placeholder="Nombre"
-          [(ngModel)]="data.nombre"
+          [(ngModel)]="data.nombreProducto"
         />
       </div>
       <div class="col-6">
@@ -25,9 +24,7 @@
         id="lista"
         name="lista"
         class="form-control"
-        [(ngModel)]="lista"
-        (change)="onChangeCategoria()"
-
+        [(ngModel)]="data.categoriaProducto"
       >
         <ng-container *ngIf="lista">
           <option
@@ -49,28 +46,39 @@
           name="descripcion"
           rows="3"
           placeholder="Descripción del producto"
-          [(ngModel)]="data.descripcion"
+          [(ngModel)]="data.descripcionProducto"
         ></textarea>
       </div>
       <div class="col-6">
-        <label for="precio" class="form-label is-required">Precio </label>
+        <label for="precioCompra" class="form-label is-required">Precio Compra </label>
+        <input
+          id="precioCompra"
+          name="precioCompra"
+          type="text"
+          class="form-control"
+          placeholder="Precio Compra"
+          [(ngModel)]="data.precioCompraProducto"
+        />
+      </div>
+      <div class="col-6">
+        <label for="precio" class="form-label is-required">Precio venta</label>
         <input
           id="precio"
           name="precio"
           type="text"
-          type="text"
           class="form-control"
-          placeholder="Precio"
-          [(ngModel)]="data.precio"
+          placeholder="Precio Venta"
+          [(ngModel)]="data.precioVentaProducto"
         />
       </div>
       <div class="col-6">
-        <label for="imagen" class="form-label is-required">Imagen </label>
+        <label for="imagen" class="form-label is-required">Imagen </label><br>
         <input
           id="imagen"
           name="imagen"
           type="file"
           accept=".png, .jpg, .jpeg"
+          [(ngModel)]="data.imagen"
         />
       </div>
 

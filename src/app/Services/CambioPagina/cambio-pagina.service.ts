@@ -1,5 +1,7 @@
+
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { Route } from 'src/app/Models/Routes.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -11,28 +13,48 @@ export class CambioPaginaService {
 
   public routes: Route[] = [{
     path: '/login',
+    touched: true,
   }, {
     path: '/principal',
+    touched:false
   }, {
     path: '/add',
+    touched:false
 
   }, {
-    path: '/view'
+    path: '/view',
+    touched:false
   }]
 
   constructor(private router: Router) { }
 
-  public cambioPagina(pagina: number) {
+  public cambioPagina(pagina: number, touched:boolean) {
    // console.log("pagina"+pagina)
     this.actualIndexRoute =pagina;
-    this.router.navigateByUrl(
-      this.routes[this.actualIndexRoute].path)
+    this.routes[pagina-1].touched=true;
+    if(this.routes[pagina-1].touched=== true){
+      this.router.navigateByUrl(
+        this.routes[this.actualIndexRoute].path)
+    }
+
   };
 
+  public checkRoute() {
+    if (this.routes[0].touched) {
+      this.router.navigateByUrl(
+        this.routes[this.actualIndexRoute].path)
+    } if (this.routes[1].touched) {
+      this.router.navigateByUrl(
+        this.routes[this.actualIndexRoute].path)
+    } if (!this.routes.findIndex[this.actualIndexRoute]) {//
+      this.router.navigateByUrl(
+        this.routes[this.actualIndexRoute].path)
+    }
+
+  }
+
 
 
 };
 
-interface Route {
-  path: string;
-};
+

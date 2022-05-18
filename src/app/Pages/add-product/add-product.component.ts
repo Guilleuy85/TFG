@@ -15,22 +15,19 @@ import { Component, OnInit, } from '@angular/core';
 })
 export class AddProductComponent implements OnInit {
 
+
+  //Varíables del producto a guardar.
   data: Product = {
-    nombre: undefined,
-    descripcion: undefined,
-    categoria: undefined,
-    precio: undefined,
+    nombreProducto: undefined,
+    descripcionProducto: undefined,
+    categoriaProducto: undefined,
+    precioCompraProducto: undefined,
+    precioVentaProducto: undefined,
     imagen: undefined
   }
 
   principal: number = 1;//Variable que se envía para el cambio de página.
   lista: Categoria[];
-  nombreProducto: string= undefined;
-  categoriaProducto: string=undefined;
-  descripcionProducto: string = undefined;
-  precioCompra:string= undefined;
-  precioVenta: string=undefined;
-  imagenProducto: string;
 
 
   constructor(
@@ -41,15 +38,13 @@ export class AddProductComponent implements OnInit {
 
   ngOnInit(): void {
     this.listaCategorias();
-    setTimeout(() => {
-      console.log(this.lista);
-    }, 4500);
+
   }
 
 
 
   public onChangeCategoria(){
-    console.log("hola")
+    console.log("Categoría que se ha elegido"+this.data.categoriaProducto);
 
   }
   public listaCategorias() {
@@ -57,11 +52,17 @@ export class AddProductComponent implements OnInit {
   };
 
   public atras() {
-    this.cambio.cambioPagina(this.principal);
+    this.cambio.cambioPagina(this.principal, true);
   }
 
   public saveProduct() {
-    alert("relaxing cup of café con leche")
+    console.log("Nombre: "+this.data.nombreProducto+
+                " Categoria: "+this.data.categoriaProducto+
+                " Descripcion: "+this.data.descripcionProducto+
+                " PrecioCompra: "+this.data.precioCompraProducto+
+                " PrecioVenta: "+this.data.precioVentaProducto+
+                " Imagen"+ this.data.imagen)
+
   }
 
 }
