@@ -13,7 +13,6 @@ import { Component, OnInit, } from '@angular/core';
   styleUrls: ['./add-product.component.scss']
 })
 export class AddProductComponent implements OnInit {
-  principal: number= 1;
 
   data: Product = {
     nombre: undefined,
@@ -23,31 +22,25 @@ export class AddProductComponent implements OnInit {
     imagen: undefined
   }
 
-  tiene:boolean =false;
-  descripcion: String= undefined;
+  principal: number = 1;//Variable que se envía para el cambio de página.
+
+  descripcion: String = undefined;
 
   constructor(
-    private loadingService : LoadingService,
+    private loadingService: LoadingService,
     private cambio: CambioPaginaService,
     private http: HttpClientModule
-    ) { }
+  ) { }
 
   ngOnInit(): void {
-
-
   }
 
-  public atras(){
+  public atras() {
     this.cambio.cambioPagina(this.principal);
-
-
   }
 
-  public saveProduct(){
-
+  public saveProduct() {
     alert("relaxing cup of café con leche")
-
-
   }
 
 }
