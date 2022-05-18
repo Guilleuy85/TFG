@@ -13,7 +13,7 @@ export class PrincipalComponent implements OnInit {
   loading;
   router: Router;
   visualizar:number =3;
-  add: number =2;
+  rutaAdd: number =2;
 
   constructor(
                private loadingService: LoadingService,
@@ -31,7 +31,7 @@ export class PrincipalComponent implements OnInit {
 
   }
   public onClickAgregar(){
-    this.cambio.cambioPagina(this.add, true);
-    console.log ("add tocado");
+    this.cambio.cambioPagina(this.rutaAdd, true);
+
   }
 }

@@ -5,7 +5,8 @@ export interface Product {
   descripcionProducto: string;
   categoriaProducto: string;
   precioCompraProducto: string;
-  precioVentaProducto: string
+  precioVentaProducto: string;
+  cantidadProducto:string;
   imagen: File;
 
 }

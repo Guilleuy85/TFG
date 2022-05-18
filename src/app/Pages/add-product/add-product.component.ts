@@ -23,6 +23,7 @@ export class AddProductComponent implements OnInit {
     categoriaProducto: undefined,
     precioCompraProducto: undefined,
     precioVentaProducto: undefined,
+    cantidadProducto: undefined,
     imagen: undefined
   }
 
@@ -61,7 +62,8 @@ export class AddProductComponent implements OnInit {
                 " Descripcion: "+this.data.descripcionProducto+
                 " PrecioCompra: "+this.data.precioCompraProducto+
                 " PrecioVenta: "+this.data.precioVentaProducto+
-                " Imagen"+ this.data.imagen)
+                " Cantidad: "+this.data.cantidadProducto+
+                " Imagen"+ this.data.imagen);
 
   }
 
