@@ -1,2 +1,32 @@
-<p>view-products works!</p>
-<h1>Hello kitty</h1>
+<div class="">
+  <h1 class="h1">Productos</h1>
+  <ul class="list-group">
+    <div *ngFor="let p of products" class="col">
+      <div class="card col-6">
+        <img
+          src="./../../../assets/logop.gif"
+          class="card-img-top"
+          alt="product img"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ p.nombreProducto }}</h5>
+          <p class="card-text">
+            {{ "Nombre: " + p.descripcionProducto }}
+          </p>
+          <p class="card-text">
+            {{ "Categoría: " + p.categoriaProducto }}
+          </p>
+          <p class="card-text">
+            {{ "Precio compra : " + p.precioCompraProducto + "€" }}
+          </p>
+          <p class="card-text">
+            {{ "Precio Venta: " + p.precioVentaProducto + "€" }}
+          </p>
+          <p class="card-text">
+            {{ "Cantidad: " + p.cantidadProducto }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </ul>
+</div>

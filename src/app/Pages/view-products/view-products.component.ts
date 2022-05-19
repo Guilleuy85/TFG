@@ -1,5 +1,6 @@
 
 import { Component,  OnInit } from '@angular/core';
+import { productos } from 'src/app/Models/product.interface';
 
 
 
@@ -11,7 +12,7 @@ import { Component,  OnInit } from '@angular/core';
 })
 export class ViewProductsComponent implements OnInit {
 
-
+  products = productos;
 
   constructor() { }
 
