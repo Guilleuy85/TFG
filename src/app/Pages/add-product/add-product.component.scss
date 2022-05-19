@@ -1,23 +1,37 @@
-.form{
-  align-self: center;
-  margin: 1em;
-  padding: 25em;
-  height: wrap;
-  width: wrap;
 
+.caja{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form{
+  align-content: center;
+  padding: 1em;
+  height: wrap;
+  width: 65%;
+  box-shadow: 0 0 4px #444;
+  background-color: white;
+  & > div {
+    margin: 1em;
+  }
+}
+
+.flex-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  width: 400px;
+}
+
+button {
+  padding: .2em 2em;
 }
 
 
 .is-required:before {
-
   content: "*";
-
   margin-left: 3px;
-
   color: red;
-
   font-weight: bold;
-
 }
-
 
