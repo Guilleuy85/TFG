@@ -12,5 +12,11 @@ export class FirebaseService {
   guardarProductos(producto: any){
     //Esto está mal.
     this.httpClient.post('https://tfgedix-default-rtdb.europe-west1.firebasedatabase.app/datos.json',producto)
+    .subscribe(response=>console.log("Se ha guardado el producto"+ response),
+    error=> console.log("Error: "+error)
+
+
+
+      );
   }
 }
