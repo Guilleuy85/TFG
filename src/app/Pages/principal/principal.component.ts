@@ -26,12 +26,10 @@ export class PrincipalComponent implements OnInit {
 
 
   public onClickVisualizar (){
-    this.cambio.cambioPagina(this.visualizar, true);
-    console.log ("visualizar tocado");
-
+    this.cambio.cambioPagina(this.visualizar);
   }
   public onClickAgregar(){
-    this.cambio.cambioPagina(this.rutaAdd, true);
+    this.cambio.cambioPagina(this.rutaAdd);
 
   }
 }

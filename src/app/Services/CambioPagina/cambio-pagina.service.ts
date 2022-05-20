@@ -13,31 +13,36 @@ export class CambioPaginaService {
 
   public routes: Route[] = [{
     path: '/login',
-    touched: true,
+    touched: false,
   }, {
     path: '/principal',
-    touched:false
+    touched:false,
   }, {
     path: '/add',
-    touched:false
+    touched:false,
 
   }, {
     path: '/view',
-    touched:false
+    touched:false,
   }]
 
   constructor(private router: Router) { }
 
-  public cambioPagina(pagina: number, touched:boolean) {
-   // console.log("pagina"+pagina)
+  public cambioPagina(pagina: number) {
     this.actualIndexRoute =pagina;
     this.routes[pagina-1].touched=true;
     if(this.routes[pagina-1].touched=== true){
       this.router.navigateByUrl(
         this.routes[this.actualIndexRoute].path)
+
     }
 
   };
+
+  public vueltaALogin(){
+    this.router.navigateByUrl(this.routes[0].path);
+  }
+
 
   public checkRoute() {
     if (this.routes[0].touched) {

@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from './components/footer/footer/footer.component';
+import { NavbarComponent } from './components/navbar/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FooterComponent } from './components/footer/footer/footer.component';
     PrincipalComponent,
     ViewProductsComponent,
     AddProductComponent,
-    FooterComponent
+    FooterComponent,
+    NavbarComponent
 
   ],
   imports: [

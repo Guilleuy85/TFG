@@ -16,14 +16,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
 
-    this.loadingService.getLoading()
-
-      .subscribe((loading: boolean) => {
-
-        this.loading = loading;
-
-      })
-     this.cambioPaginaService.checkRoute();
+ this.cambioPaginaService.checkRoute();
 
   }
 

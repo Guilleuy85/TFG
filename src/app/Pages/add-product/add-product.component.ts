@@ -19,12 +19,12 @@ export class AddProductComponent implements OnInit {
 
   //Varíables del producto a guardar.
   data: Product = {
-    nombreProducto: undefined,
-    descripcionProducto: undefined,
-    categoriaProducto: undefined,
-    precioCompraProducto: undefined,
-    precioVentaProducto: undefined,
-    cantidadProducto: undefined,
+    nombre: undefined,
+    descripcion: undefined,
+    categoria: undefined,
+    precioCompra: undefined,
+    precio: undefined,
+    cantidad: undefined,
     imagen: undefined
   }
 
@@ -47,7 +47,7 @@ export class AddProductComponent implements OnInit {
 
 
   public onChangeCategoria(){
-    console.log("Categoría que se ha elegido"+this.data.categoriaProducto);
+    console.log("Categoría que se ha elegido"+this.data.categoria);
 
   }
   public listaCategorias() {
@@ -55,20 +55,33 @@ export class AddProductComponent implements OnInit {
   };
 
   public atras() {
-    this.cambio.cambioPagina(this.principal, true);
+    this.cambio.cambioPagina(this.principal);
   }
 
   public saveProduct() {
 this.firebase.guardarProductos(this.data)
     //this.firebase.guardarProductos(this.data)
-    console.log("Nombre: "+this.data.nombreProducto+
-                " Categoria: "+this.data.categoriaProducto+
-                " Descripcion: "+this.data.descripcionProducto+
-                " PrecioCompra: "+this.data.precioCompraProducto+
-                " PrecioVenta: "+this.data.precioVentaProducto+
-                " Cantidad: "+this.data.cantidadProducto+
+    console.log("Nombre: "+this.data.nombre+
+                " Categoria: "+this.data.categoria+
+                " Descripcion: "+this.data.descripcion+
+                " PrecioCompra: "+this.data.precioCompra+
+                " PrecioVenta: "+this.data.precio+
+                " Cantidad: "+this.data.cantidad+
                 " Imagen"+ this.data.imagen);
+     alert("Se ha guardado el producto");
+     setTimeout(() => {
+      this.data.nombre= undefined;
+      this.data.categoria=undefined;
+      this.data.descripcion=undefined;
+      this.data.precioCompra= undefined;
+      this.data.precio= undefined;
+      this.data.cantidad=undefined;
+      this.data.imagen=undefined;
+
+     }, 300);
+
 
   }
+
 
 }

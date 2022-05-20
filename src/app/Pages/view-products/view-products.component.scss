@@ -8,3 +8,15 @@ img {
   margin: 1em;
 }
 
+.flex-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  width: 400px;
+  margin: 2em;
+
+}
+
+button {
+  padding: .2em 2em;
+}

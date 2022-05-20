@@ -1,4 +1,4 @@
-
+import { CambioPaginaService } from './../../Services/CambioPagina/cambio-pagina.service';
 import { Component,  OnInit } from '@angular/core';
 import { productos } from 'src/app/Models/product.interface';
 
@@ -14,10 +14,18 @@ export class ViewProductsComponent implements OnInit {
 
   products = productos;
 
-  constructor() { }
+  constructor(private cambio:CambioPaginaService) { }
 
   ngOnInit(): void {
 
+  }
+
+  public VueltaAAgregar (){
+    this.cambio.cambioPagina(2);
+  }
+
+  public VueltaAPrincipal (){
+    this.cambio.cambioPagina(1);
   }
 
 }
