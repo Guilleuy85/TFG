@@ -1,6 +1,5 @@
 import { usuarios } from '../../Models/Usuarios';
 import { CambioPaginaService } from './../../Services/CambioPagina/cambio-pagina.service';
-import { LoadingService } from 'src/app/Services/Loading/loading.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from 'src/app/Models/Usuarios';

@@ -9,7 +9,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./principal.component.scss']
 })
 export class PrincipalComponent implements OnInit {
-  loading;
   router: Router;
   visualizar: number = 3;//variabla con el valor de la ruta a la página visualizar.
   rutaAdd: number = 2;//variable con el valor de la ruta a la página agregar producto.

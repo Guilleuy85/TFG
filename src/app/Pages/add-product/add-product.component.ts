@@ -2,10 +2,7 @@ import { FirebaseService } from './../../Services/Firebase/firebase.service';
 import { Categoria, categorias } from './../../Models/Categorias';
 import { CambioPaginaService } from './../../Services/CambioPagina/cambio-pagina.service';
 import { Product } from './../../Models/product.interface';
-import { HttpClientModule } from '@angular/common/http';
 import { Component, OnInit, } from '@angular/core';
-
-
 
 
 
@@ -41,7 +38,6 @@ export class AddProductComponent implements OnInit {
 
   constructor(
     private cambio: CambioPaginaService,//Importación del servicio cambioPaginaService
-    private http: HttpClientModule,
     private firebase: FirebaseService//Importación del servicio FirebaseService
   ) { }
 

@@ -1,6 +1,5 @@
 import { ViewProductsComponent } from './Pages/view-products/view-products.component';
 import { AddProductComponent } from './Pages/add-product/add-product.component';
-import { LoadingComponent } from './Pages/loading/loading.component';
 import { LoginComponent } from './Pages/login/login.component';
 import { PrincipalComponent } from './Pages/principal/principal.component';
 import { NgModule } from '@angular/core';
