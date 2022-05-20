@@ -4,27 +4,23 @@
   <ul class="list-group">
     <div *ngFor="let p of products" class="col">
       <div class="card col-6">
-        <img
-          src="./../../../assets/logop.gif"
-          class="card-img-top"
-          alt="product img"
-        />
+        <img src="{{ p.imagen }}" class="card-img-top" alt="product img" />
         <div class="card-body">
-          <h5 class="card-title">{{ p.nombreProducto }}</h5>
+          <h5 class="card-title">{{ p.nombre }}</h5>
           <p class="card-text">
-            {{ "Nombre: " + p.descripcionProducto }}
+            {{ "Nombre: " + p.descripcion }}
           </p>
           <p class="card-text">
-            {{ "Categoría: " + p.categoriaProducto }}
+            {{ "Categoría: " + p.categoria }}
           </p>
           <p class="card-text">
-            {{ "Precio compra : " + p.precioCompraProducto + "€" }}
+            {{ "Precio compra : " + p.precioCompra + "€" }}
           </p>
           <p class="card-text">
-            {{ "Precio Venta: " + p.precioVentaProducto + "€" }}
+            {{ "Precio Venta: " + p.precio + "€" }}
           </p>
           <p class="card-text">
-            {{ "Cantidad: " + p.cantidadProducto }}
+            {{ "Cantidad: " + p.cantidad }}
           </p>
         </div>
       </div>
@@ -48,5 +44,5 @@
         Agregar otro producto
       </button>
     </div>
+  </div>
 </div>
-

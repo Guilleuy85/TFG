@@ -12,7 +12,6 @@
         <!-- Login Form -->
         <form class="form">
           <input
-
             id="login"
             class="form-control col-9 m-5"
             name="login"
@@ -27,15 +26,21 @@
             placeholder="Contraseña"
             [(ngModel)]="this.contrasenaEscrita"
           />
-          <input type="submit" class="fadeIn fourth" value="Entrar" (click)="comprobarusuario()" />
+          <input
+            type="submit"
+            class="fadeIn fourth"
+            value="Entrar"
+            (click)="comprobarusuario()"
+          />
         </form>
 
         <!-- Remind Passowrd -->
         <div id="formFooter">
-          <a class="underlineHover" (click)="noImplementado()">Recuperar contraseña/ Crear nuevo usuario</a>
+          <a class="underlineHover" (click)="noImplementado()"
+            >Recuperar contraseña/ Crear nuevo usuario</a
+          >
         </div>
       </div>
     </div>
   </body>
 </div>
-

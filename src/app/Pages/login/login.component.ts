@@ -1,9 +1,9 @@
-import { usuarios } from './../../Models/hardData';
+import { usuarios } from '../../Models/Usuarios';
 import { CambioPaginaService } from './../../Services/CambioPagina/cambio-pagina.service';
 import { LoadingService } from 'src/app/Services/Loading/loading.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { User } from 'src/app/Models/hardData';
+import { User } from 'src/app/Models/Usuarios';
 
 @Component({
   selector: 'edix-login',
@@ -27,13 +27,13 @@ export class LoginComponent implements OnInit {
   usuarioEscrito: string;
   contrasenaEscrita: string;
 
-  listaUsuarios: User[];
+  listaUsuarios: User[];//variable con la lista de Usuarios y contraseñas que se llama en OnInit.
 
 
-  constructor(private cambio: CambioPaginaService) { }
+  constructor(private cambio: CambioPaginaService) { }//Importación del servicio CambioPaginaService.
 
   ngOnInit(): void {
-    this.cargarDatos();
+    this.cargarDatos();//Carga de datos de usuarios y contraseñas.
   }
 
 

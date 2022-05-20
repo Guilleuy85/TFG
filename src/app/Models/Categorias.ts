@@ -1,8 +1,13 @@
+/**
+ * interface que formato de categorías utilizado en el select categorías en la página
+ * Add-product.
+ */
+
 export interface Categoria {
   nombreCategoria: string;
   clave: string;
 }
-
+//constante con las categorías
 export const categorias: Categoria[] = [
   {
     nombreCategoria: "Pantalones",

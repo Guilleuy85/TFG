@@ -1,3 +1,7 @@
+/**
+ * Interface con la estructura del objeto User.
+ */
+
 export interface User {
   usuario: string;
   contrasena: string;
