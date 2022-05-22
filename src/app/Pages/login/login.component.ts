@@ -25,6 +25,7 @@ export class LoginComponent implements OnInit {
    */
   usuarioEscrito: string;
   contrasenaEscrita: string;
+  error: boolean= true;
 
   listaUsuarios: User[];//variable con la lista de Usuarios y contraseñas que se llama en OnInit.
 
@@ -50,7 +51,11 @@ export class LoginComponent implements OnInit {
       if (this.listaUsuarios[i].usuario === this.usuarioEscrito &&
         this.listaUsuarios[i].contrasena === this.contrasenaEscrita) {
         this.cambio.cambioPagina(this.login);
+        this.error= false;
       }
+    }
+    if(this.error){
+      alert("Usuario incorrecto");
     }
   }
 
